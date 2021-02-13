@@ -1134,19 +1134,21 @@ export default function usePromise(promiseCreator, deps) {
       setLoading(false);
     };
     process();
-    // eslint-disabled-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 
   return [loading, resolved, error];
 }
 ```
 
+> deps 배열이 ESLint 경고가 나타나게 되는데, 경고를 무시하려면 특정 줄에서만 ESLint 규칙을 무시하도록 주석을 작성해 주어야 한다.
+
 
 
 _components/NewsList.js_
 
 ```react
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import NewsItem from './NewsItem';
 import axios from 'axios';
@@ -1219,7 +1221,7 @@ export default NewsList;
 
 
 
-- 뒤에 나올 리덕스아ㅗ 리덕스 미들웨어를 배우면 좀 더 쉽게 요청에 대한 상태를 관리할 수 있다.
+- 뒤에 나올 리덕스와  리덕스 미들웨어를 배우면 좀 더 쉽게 요청에 대한 상태를 관리할 수 있다.
 
 
 
