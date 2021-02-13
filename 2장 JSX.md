@@ -191,6 +191,7 @@ reportWebVitals();
 ```
 
 > [Strict mode](https://zereight.tistory.com/587) 라고 하는데 [여기](https://ko.reactjs.org/docs/strict-mode.html) 를 참조 해보자.
+  Strict mode 로 컴포넌트를 감싸면 두번 렌더링한다고 한다.. 두번 렌더링하는 이유는 여러 체크를 한다고 하는데(.. 에러라던지 .. 잘못된 메서드를 쓴다던지)
 
 
 
