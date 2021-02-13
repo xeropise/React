@@ -30,7 +30,7 @@
 
 
 
-- 자바스크립트가 실행될 때까지 페이지가 비어 있기 대문에 자바스크립트 파일이 로딩되어 실행되는 짧은 시간 동안 흰 페이지가 나타날 수 있다는 단점도 있다.
+- 자바스크립트가 실행될 때까지 페이지가 비어 있기  때문에 자바스크립트 파일이 로딩되어 실행되는 짧은 시간 동안 흰 페이지가 나타날 수 있다는 단점도 있다.
 
 
 
@@ -74,7 +74,7 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 ```
-
+> [reportWebVitalks](https://create-react-app.dev/docs/measuring-performance/) 는 뭘까
 
 
 
