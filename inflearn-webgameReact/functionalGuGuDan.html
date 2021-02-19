@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            
+        </div>
+
+        <script type="text/babel"> 
+        const functionalGuGuDan = () => {
+
+            const [first, setFirst] = React.useState(Math.ceil(Math.random() * 9));
+            const [second, setSecond] = React.useState(Math.ceil(Math.random() * 9));
+            const [value, setValue] = React.useState('');
+            const [result, setResult] = React.useState('');
+            const inputRef = React.useRef(null);
+            
+            const onChangeInput = (e) => {
+                setValue(e.target.value);
+            };
+
+            const onSubmit= (e) => {
+                    e.preventDefault();
+                    if(parseInt(value) === first * second){
+                        setResult('정답: '+ value);
+                        setFirst(Math.ceil(Math.random()*9));
+                        setSecond(Math.ceil(Math.random()*9));
+                        setValue('');
+                        inputRef.current.focus();
+                    } else{
+                        setResult("떙");
+                        setValue("");
+                        inputRef.current.focus();
+                    }
+            };
+            
+            return <React.Fragement>
+                    <div>{first} 곱하기 {second}는?</div>
+                    <form onSubmit={}>
+                        <input ref={inputRef} onChange={onChangeInput} value={value} />
+                        <button id="button" className="" htmlFor="">입력!</button>
+                    </form>
+                    <div id="result">{result}</div>
+                </React.Fragement>
+        }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(<functionalGuGuDan />, document.querySelector('#root'));
+        </script>
+    </body>
+</html>
