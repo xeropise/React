@@ -1,4 +1,5 @@
 const path = require("path"); // NodeJs의 경로 조작 기능 가져옴
+const refereshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = {
   name: "word-relay-setting", //웹팩 설정 이름
@@ -18,14 +19,22 @@ module.exports = {
         loader: "babel-loader",
         options: {
           presets: ["@babel/preset-env", "@babel/preset-react"],
-          plugins: ["@babel/plugin-proposal-class-properties"],
+          plugins: [
+            "@babel/plugin-proposal-class-properties",
+            "react-refresh/babel",
+          ],
         },
       },
     ],
   },
-
+  plugins: [new refereshWebpackPlugin()],
   output: {
     path: path.join(__dirname, "dist"), // 폴더를 dist 로
     filename: "app.js",
+    publicPath: "/dist",
   }, // 출력
+  devServer: {
+    publicPath: "/dist",
+    hot: true,
+  },
 };
