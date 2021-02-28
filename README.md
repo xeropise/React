@@ -9,3 +9,7 @@ https://reactrouter.com/web/example/basic
 🎈 react devtools Github ( middle ware 설치 1.3 참조 )
 
 https://github.com/zalmoxisus/redux-devtools-extension
+
+🎈 react redux 사용 시 참조
+
+https://react-redux.js.org/5.x/api/connect
