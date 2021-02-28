@@ -5,3 +5,7 @@
 🎈 리액트 라우터 트레이닝 홈페이지이다. 실무에 필요한 예가 많이 있으니 참조 하도록 하자.
 
 https://reactrouter.com/web/example/basic
+
+🎈 react devtools Github ( middle ware 설치 1.3 참조 )
+
+https://github.com/zalmoxisus/redux-devtools-extension
