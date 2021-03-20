@@ -163,7 +163,7 @@ app.listen(4000, () => {
 
 ```
 
-> 서버를 재식한 뒤, http://localhost:4000/?authorized=1 에 접속해 보자.
+> 서버를 재시작한 뒤, http://localhost:4000/?authorized=1 에 접속해 보자.
 
 ```
 Listening to port 4000
