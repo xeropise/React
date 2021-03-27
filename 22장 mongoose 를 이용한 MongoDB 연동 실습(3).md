@@ -58,6 +58,30 @@ posts.patch("/:id", postsCtrl.checkObjectId, postsCtrl.update);
 export default posts;
 ```
 
+- 이걸 한 번 더 리팩토링하면 다음과 같이 정리할 수 있다.
+
+_src/api/posts/index.js_
+
+```javascript
+import Router from "koa-router";
+import * as postsCtrl from "./posts.ctrl";
+import checkLoggedIn from "../../lib/checkLoggedIn";
+
+const posts = new Router();
+
+posts.get("/", postsCtrl.list);
+posts.post("/", checkLoggedIn, postsCtrl.write);
+
+const post = new Router(); // /api/posts/:id
+post.get("/", postsCtrl.read);
+post.delete("/", checkLoggedIn, postsCtrl.checkOwnPost, postsCtrl.remove);
+post.patch("/", checkLoggedIn, postsCtrl.checkOwnPost, postsCtrl.update);
+//여기 왜 s야... 수정필요
+posts.use("/:id", postsCtrl.getPostById, post.routes());
+
+export default posts;
+```
+
 ---
 
 ### 22.9.2 Request Body 검증
