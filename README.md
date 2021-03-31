@@ -21,3 +21,7 @@ https://mskims.github.io/redux-saga-in-korean/
 🎈 함수형 컴포넌트와 클래스형 컴포넌트의 차이
 
 https://overreacted.io/ko/how-are-function-components-different-from-classes/
+
+🎈 useEffect 완벽 가이드
+
+https://rinae.dev/posts/a-complete-guide-to-useeffect-ko
