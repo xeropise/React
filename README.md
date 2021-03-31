@@ -17,3 +17,7 @@ https://react-redux.js.org/5.x/api/connect
 🎈 react redux-saga 사용 시 참조
 
 https://mskims.github.io/redux-saga-in-korean/
+
+🎈 함수형 컴포넌트와 클래스형 컴포넌트의 차이
+
+https://overreacted.io/ko/how-are-function-components-different-from-classes/
