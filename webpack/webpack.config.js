@@ -1,12 +1,25 @@
 const path = require("path");
-const toml = require("toml");
-const yaml = require("yamljs");
-const json5 = require("json5");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  mode: "development",
+  entry: {
+    index: "./src/index.js",
+    print: "./src/print.js",
+  },
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist",
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Development",
+    }),
+  ],
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
+    publicPath: "/",
   },
 };
